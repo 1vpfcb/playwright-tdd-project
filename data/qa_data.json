@@ -1,0 +1,16 @@
+{
+  "course": {
+    "courseName": "Test Automation with Selenium",
+    "basePrice": "$500",
+    "discountedPrice": "$400",
+    "startDate": "Apr 10, 2025",
+    "refundDate": "May 11, 2025",
+    "programName": "Test Automation with Selenium",
+    "secureCheckout": "Secure checkout"
+  },
+  "course-prices": {
+    "upfrontPrice": "$400",
+    "installmentCount": "5",
+    "pricePerInstallment": "$100"
+  }
+}

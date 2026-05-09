@@ -8,7 +8,8 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: 1,
   workers: 1,
-  reporter: 'html',
+  outputDir: 'test-results',
+  reporter: [['html', { outputFolder: 'playwright-report', open: 'never' }]],
   use: {
     baseURL: "",
     trace: 'on-first-retry',

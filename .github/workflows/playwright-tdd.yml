@@ -47,6 +47,11 @@ jobs:
         SEP_QA_URL: https://qa.sep.tdtm.cydeo.com/taws
         SEP_USERNAME: ${{ secrets.PRACTICE_USERNAME }}
         SEP_PASSWORD: ${{ secrets.PRACTICE_PASSWORD }}
+        CARD_NUMBER: ${{ secrets.CARD_NUMBER }}
+        EXPIRATION_DATE: ${{ secrets.EXPIRATION_DATE }}
+        CVC: ${{ secrets.CVC }}
+        ZIP_CODE: ${{ secrets.ZIP_CODE }}
+
        
 
     # runs the tests in headless mode (without a GUI)

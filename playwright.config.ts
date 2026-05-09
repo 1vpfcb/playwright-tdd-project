@@ -12,16 +12,16 @@ export default defineConfig({
   use: {
     baseURL: "",
     trace: 'on-first-retry',
-    headless: false,
+    headless: !!process.env.CI,
   },
 
   projects: [
 
     {
-      name: 'Google Chrome',
+      name: process.env.CI ? 'Chromium' : 'Google Chrome',
       use: {
-        ...devices['Desktop Chrome'], 
-        channel: 'chrome',
+        ...devices['Desktop Chrome'],
+        ...(process.env.CI ? {} : { channel: 'chrome' }),
         viewport: { width: 1800, height: 1000 }, // simulate max window
       },
     },

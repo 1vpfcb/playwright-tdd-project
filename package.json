@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "tests": "npx playwright test",
+    "tests:headless": "npx playwright test --headed=false",
     "test:specific": "npx playwright test --grep file-name.spec.ts",
     "test:tag": "npx playwright test --grep @sep09",
     "report": "npx playwright show-report"

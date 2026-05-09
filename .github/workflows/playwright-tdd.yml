@@ -40,9 +40,13 @@ jobs:
     # configures the environment variables for the tests
     - name: configure environment variables
       run: |
-        echo "SEP_QA_URL=${{ secrets.SEP_QA_URL }}" >> $GITHUB_ENV
-        echo "PRACTICE_USERNAME=${{ secrets.PRACTICE_USERNAME }}" >> $GITHUB_ENV
-        echo "PRACTICE_PASSWORD=${{ secrets.PRACTICE_PASSWORD }}" >> $GITHUB_ENV
+        # runs the tests in headless mode
+    - name: Run Playwright tests
+      run: npm run tests
+      env:
+        SEP_QA_URL: https://qa.sep.tdtm.cydeo.com/taws
+        SEP_USERNAME: ${{ secrets.PRACTICE_USERNAME }}
+        SEP_PASSWORD: ${{ secrets.PRACTICE_PASSWORD }}
        
 
     # runs the tests in headless mode (without a GUI)

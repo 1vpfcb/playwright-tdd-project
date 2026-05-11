@@ -51,7 +51,7 @@ test.describe('User Story: @sep026: Enabling the Pay button on the Review Paymen
         const startApp = new StartApplicationPage(page);
 
         await fillOutCardDetails(page);
-        await reviewPaymentPage.termsAndConditionsCheckBox.check();
+        await reviewPaymentPage.termsAndConditionsCheckbox.check();
         await reviewPaymentPage.payButton.click();
 
     });

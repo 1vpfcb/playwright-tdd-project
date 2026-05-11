@@ -62,8 +62,8 @@ export class ReviewPaymentPage extends BasePage {
   public readonly totalAmount: Locator 
     = this.locator("//div[@class='content-panel-item ng-star-inserted']/span[contains(text(), 'Total')]/following-sibling::span");
 
-  public readonly termsAndConditionsCheckbox: Locator 
-    = this.locator("//input[@type = 'checkbox']");
+public readonly termsAndConditionsCheckbox: Locator 
+    = this.locator("//input[@id='defaultCheck2']");
 
   public readonly termsAndConditionsLink: Locator 
     = this.locator("//u[normalize-space()='Terms and Conditions']");

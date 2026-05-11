@@ -4,6 +4,7 @@ import { completeStartApplication } from "../../utilities/app-setup";
 import { StartApplicationPage } from "../../pages/StartApplicationPage";
 import { PaymentPlanPage } from "../../pages/PaymentPlanPage";  
 import { ReviewPaymentPage } from "../../pages/ReviewPaymentPage";
+import { time } from "console";
 
 test.describe('User Story @sep016- Next button on selecting payment page', () => {
     test.beforeEach(async ({ page }) => {
@@ -37,7 +38,8 @@ test('TC: @sep16-2: Verify Step 3 displays the correct stepper state and UI comp
         
         await test.step('Navigate to Step 3 and verify payment form is visible', async()=>{
             await paymentPlanPage.activeNextButton.click();
-            await expect(reviewPayment.cardNumberInput).toBeVisible();
+            await page.waitForLoadState('networkidle');
+            await expect(reviewPayment.cardNumberInput).toBeVisible({ timeout: 5000 });
         }); 
 
         await test.step('TC: @sep16-3: Verify that steps one and two are green, and step 3 is blue', async()=>{

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tests:headless": "npx playwright test",
+    "tests:headless": "npx playwright test --headless",
     "tests:headed": "npx playwright test --headed",
     "test:specific": "npx playwright test --grep file-name.spec.ts",
     "test:tag": "npx playwright test --grep @sep09",

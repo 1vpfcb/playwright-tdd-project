@@ -42,7 +42,7 @@ jobs:
       run: |
         # runs the tests in headless mode
     - name: Run Playwright tests
-      run: npm run tests:headless
+      run: npm run tests
       env:
         SEP_QA_URL: https://qa.sep.tdtm.cydeo.com/taws
         SEP_USERNAME: ${{ secrets.PRACTICE_USERNAME }}

@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tests:headless": "npx playwright test --headless",
-    "tests:headed": "npx playwright test --headed",
+    "tests": "npx playwright test",
     "test:specific": "npx playwright test --grep file-name.spec.ts",
     "test:tag": "npx playwright test --grep @sep09",
     "report": "npx playwright show-report"
@@ -16,8 +15,7 @@
   "type": "commonjs",
   "devDependencies": {
     "@faker-js/faker": "^10.4.0",
-    "@types/node": "^25.6.0",
-    "dotenv": "^17.4.2"
+    "@types/node": "^25.6.0"
   },
   "dependencies": {
     "@playwright/test": "^1.59.1"

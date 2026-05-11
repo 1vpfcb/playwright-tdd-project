@@ -70,9 +70,13 @@ npx playwright test -g @sep26
 
 # View HTML Report
 npx playwright show-report
+
 🔍 Implementation Highlights
+
 Event Triggering: Implemented page.keyboard.press('Tab') and blur() sequences to reliably trigger frontend validation scripts inside secure iframes.
 
 Selector Strategy: Utilized resilient locators combining ARIA roles, IDs, and text-based filters to minimize test flakiness.
 
 Consolidated Suites: Grouped related SEPs into unified spec files to optimize browser context usage and execution speed.
+<img width="999" height="727" alt="Screenshot 2026-05-11 115819" src="https://github.com/user-attachments/assets/84277315-02a3-43d2-8e27-a7c3040014a1" />
+
